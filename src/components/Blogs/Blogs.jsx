@@ -1,4 +1,5 @@
 import React from "react";
+import useTitle from "../../hooks/useTitle";
 
 const blogPosts = [
   {
@@ -51,6 +52,7 @@ const blogPosts = [
 ];
 
 const Blogs = () => {
+  useTitle("Blogs");
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
       <h2 className="text-3xl lg:text-5xl font-bold text-center mb-20">

@@ -13,6 +13,7 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 import Footer from "./components/Shared/Footer";
 import SubscriptionDetail from "./components/Subscription/SubscriptionDetails";
 import Blogs from "./components/Blogs/Blogs";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -29,7 +30,14 @@ function App() {
       <Navbar user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route
+          path="/blogs"
+          element={
+            <ProtectedRoute user={user}>
+              <Blogs></Blogs>
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/products"
           element={
@@ -54,7 +62,9 @@ function App() {
           path="/register"
           element={!user ? <Register /> : <Navigate to="/" />}
         />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
+
       <Footer></Footer>
     </>
   );
