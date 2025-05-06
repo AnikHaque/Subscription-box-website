@@ -1,12 +1,63 @@
-# React + Vite
+# 🔐 TheCrate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern subscription-based web application built with **React**, **Firebase Authentication**, and **Vite**. It offers secure login, protected routes, user profile management, dynamic blogs, testimonials, and more.
 
-Currently, two official plugins are available:
+## 🌐 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visit SubscriptionHub](https://subscription-box-website.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Purpose
+
+This project demonstrates a full-featured **subscription service website** with user authentication, blog content, testimonials, FAQs, and admin-like profile editing. Ideal for showcasing skills in React, Firebase, and modern web development practices.
+
+---
+
+## 🚀 Key Features
+
+- 🔐 **Firebase Authentication**
+
+  - Email/password and Google login
+  - Protected routes (e.g., Products, Subscription Details, My Profile)
+  - Forget Password with email reset and Gmail redirect
+
+- 📄 **Dynamic Pages**
+
+  - Subscription Services with detail view and review system
+  - Blogs (6 total) with `Show All` navigation
+  - Testimonials with star ratings
+
+- ✍️ **My Profile**
+
+  - View and edit user name/photo using `updateProfile`
+
+- ❓ **FAQ Section**
+
+  - Stylish accordion + image layout
+
+- 👁️ **Show/Hide Password Toggle**
+
+  - Secure password UX on Register page
+
+- ❌ **Custom 404 Page**
+
+  - Styled Not Found page for undefined routes
+
+- 🧠 **Dynamic Page Titles**
+  - Uses `react-helmet-async` to set page titles
+
+---
+
+## 📦 NPM Packages Used
+
+| Package               | Purpose                                  |
+| --------------------- | ---------------------------------------- |
+| react-router-dom      | Routing and protected routes             |
+| firebase              | Authentication and user management       |
+| sweetalert2           | Alerts and notifications                 |
+| react-icons           | Icons for UI (e.g., password eye toggle) |
+| react-helmet-async    | Dynamic page title management            |
+| tailwindcss / daisyUI | Styling and UI components                |
+
+---
