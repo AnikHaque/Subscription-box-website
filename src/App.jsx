@@ -14,6 +14,7 @@ import Footer from "./components/Shared/Footer";
 import SubscriptionDetail from "./components/Subscription/SubscriptionDetails";
 import Blogs from "./components/Blogs/Blogs";
 import NotFound from "./components/NotFound/NotFound";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -35,6 +36,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <Blogs></Blogs>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute user={user}>
+              <Profile></Profile>
             </ProtectedRoute>
           }
         />
