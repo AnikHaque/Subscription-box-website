@@ -3,29 +3,59 @@ import React from "react";
 const blogPosts = [
   {
     id: 1,
-    title: "Maximizing Productivity with CodeMaster Pro",
-    category: "Development Tools",
-    image:
-      "https://w7.pngwing.com/pngs/388/444/png-transparent-web-development-responsive-web-design-php-development-tools-software-development-web-design-web-design-development-responsive-web-design-thumbnail.png",
+    title: "Why Firebase is Perfect for Startups",
+    date: "2025-05-01",
     excerpt:
-      "Learn how CodeMaster Pro enhances developer workflows with powerful features.",
+      "Discover why Firebase is a top choice for rapid development and scalability...",
+    image:
+      "https://firebase.google.com/static/images/brand-guidelines/logo-logomark.png",
   },
   {
     id: 2,
-    title: "StreamHub: The Future of Streaming Services",
-    category: "Media Streaming",
-    image:
-      "https://w7.pngwing.com/pngs/902/264/png-transparent-streaming-media-online-video-platform-business-service-live-youtube-blue-text-service-thumbnail.png",
+    title: "Top UI Libraries for React in 2025",
+    date: "2025-04-20",
     excerpt:
-      "Explore StreamHub’s advanced media capabilities and what sets it apart.",
+      "Explore the most powerful and easy-to-use UI libraries available today...",
+    image: "https://www.patterns.dev/img/reactjs/react-logo@3x.svg",
   },
-  // Add more as needed
+  {
+    id: 3,
+    title: "Boost Your DevOps Workflow with DevOps Guard",
+    date: "2025-04-10",
+    excerpt: "Enhance your DevOps lifecycle using top-tier monitoring tools...",
+    image:
+      "https://cdn.cloudeq.com/wp-content/uploads/2023/03/15061618/dev-ops.webp",
+  },
+  {
+    id: 4,
+    title: "CloudSync: Your Data’s Best Friend",
+    date: "2025-03-30",
+    excerpt: "A deep dive into why CloudSync leads the cloud storage race...",
+    image:
+      "https://cdni.iconscout.com/illustration/premium/thumb/data-synchronise-illustration-download-in-svg-png-gif-file-formats--cloud-sync-computing-technology-web-services-pack-seo-illustrations-3324644.png",
+  },
+  {
+    id: 5,
+    title: "How AI Writer Changes the Content Game",
+    date: "2025-03-20",
+    excerpt: "Write better, faster, and smarter using cutting-edge AI tools...",
+    image: "https://via.placeholder.com/600x300.png?text=AI+Writer",
+  },
+  {
+    id: 6,
+    title: "Design Smarter with DesignCraft",
+    date: "2025-03-10",
+    excerpt: "Unleashing creativity using next-gen design tools...",
+    image: "https://via.placeholder.com/600x300.png?text=DesignCraft",
+  },
 ];
 
 const Blogs = () => {
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-8">Our Blog</h2>
+      <h2 className="text-3xl lg:text-5xl font-bold text-center mb-20">
+        Our Blogs
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
           <div

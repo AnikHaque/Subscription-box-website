@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Footer from "./components/Shared/Footer";
 import SubscriptionDetail from "./components/Subscription/SubscriptionDetails";
+import Blogs from "./components/Blogs/Blogs";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -28,6 +29,7 @@ function App() {
       <Navbar user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route
           path="/products"
           element={

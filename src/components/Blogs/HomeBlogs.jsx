@@ -159,7 +159,7 @@ const HomeBlog = () => {
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <Link to="/blog">
+          <Link to="/blogs">
             <button className="text-blue-600 font-semibold underline text-2xl">
               Show All Blogs
             </button>
