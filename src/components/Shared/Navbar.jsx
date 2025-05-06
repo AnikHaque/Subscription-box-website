@@ -1,35 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { auth } from "../../firebase";
+import { signOut } from "firebase/auth";
 
-const Navbar = () => {
+export default function Navbar({ user }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const logout = async () => {
+    await signOut(auth);
+    navigate("/login");
+  };
+
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
-        <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Link</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
-                  <li>
-                    <a>Link 1</a>
-                  </li>
-                  <li>
-                    <a>Link 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
+    <nav className="bg-blue-600 text-white px-4 py-3 shadow-md">
+      <div className="container mx-auto flex items-center justify-between">
+        {/* Website Name */}
+        <Link to="/" className="text-xl font-bold">
+          MySite
+        </Link>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white focus:outline-none"
+        >
+          ☰
+        </button>
+
+        {/* Links */}
+        <div
+          className={`md:flex gap-4 items-center ${
+            isOpen ? "block" : "hidden"
+          } md:block`}
+        >
+          <Link
+            to="/"
+            className={`block py-1 ${
+              isActive("/") ? "font-semibold underline" : ""
+            }`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/profile"
+            className={`block py-1 ${
+              isActive("/profile") ? "font-semibold underline" : ""
+            }`}
+          >
+            My Profile
+          </Link>
+
+          {/* Auth Area */}
+          {user ? (
+            <div className="flex items-center gap-4">
+              {/* Profile image with tooltip */}
+              {user.photoURL ? (
+                <div className="relative group cursor-pointer">
+                  <img
+                    src={user.photoURL}
+                    alt="User"
+                    className="w-8 h-8 rounded-full border-2 border-white"
+                  />
+                  <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                    {user.displayName || "No Name"}
+                  </span>
+                </div>
+              ) : (
+                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-black">
+                  ?
+                </div>
+              )}
+
+              <button
+                onClick={logout}
+                className="bg-red-500 px-3 py-1 rounded hover:bg-red-600 transition"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="bg-green-500 px-3 py-1 rounded hover:bg-green-600 transition"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
-    </div>
+    </nav>
   );
-};
-
-export default Navbar;
+}
