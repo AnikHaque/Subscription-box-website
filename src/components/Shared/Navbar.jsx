@@ -16,11 +16,11 @@ export default function Navbar({ user }) {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-blue-600 text-white px-4 py-3 shadow-md">
+    <nav className="bg-blue-600 text-white px-4 py-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         {/* Website Name */}
         <Link to="/" className="text-xl font-bold">
-          MySite
+          TheCrate
         </Link>
 
         {/* Mobile Menu Button */}
@@ -53,6 +53,7 @@ export default function Navbar({ user }) {
           >
             My Profile
           </Link>
+          <Link to="/contact">Contact Us</Link>
 
           {/* Auth Area */}
           {user ? (

@@ -4,38 +4,29 @@ const slides = [
   {
     id: 1,
     image:
-      "https://thecrate.themeslr.com/wp-content/uploads/2021/10/shave-crate-hero-1.jpg?id=7559",
-    title: "Premium Grooming Kits",
-    desc: "Unleash your best look with our curated shaving products.",
-    btn1: "Shop Now",
+      "https://t4.ftcdn.net/jpg/02/83/46/33/360_F_283463385_mfnrx6RPU3BqObhVuVjYZjeZ5pegE7xq.jpg",
+    title: "Web Design Subscription Kits",
+    desc: "Unleash your best look with our curated Design products.",
+    btn1: "Subscribe Now",
     btn2: "Learn More",
   },
   {
     id: 2,
     image:
-      "https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp",
-    title: "Modern Essentials",
-    desc: "Explore minimalist designs and modern lifestyle products.",
+      "https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg",
+    title: "Modern Web Development Kits",
+    desc: "Explore minimalist designs and modern development products.",
     btn1: "Explore",
-    btn2: "Collections",
+    btn2: "Subscribe",
   },
   {
     id: 3,
     image:
-      "https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp",
-    title: "Adventure Awaits",
-    desc: "Gear up for your next outdoor adventure in style.",
-    btn1: "Get Gear",
+      "https://cdn.vectorstock.com/i/1000v/40/06/futuristic-devops-process-banner-vector-41714006.jpg",
+    title: "Essential Security Kits",
+    desc: "Gear up for your next outdoor devops in style.",
+    btn1: "Get Subscription",
     btn2: "See Tips",
-  },
-  {
-    id: 4,
-    image:
-      "https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp",
-    title: "Eco-Friendly Living",
-    desc: "Sustainable products for a better tomorrow.",
-    btn1: "Go Green",
-    btn2: "Our Mission",
   },
 ];
 
