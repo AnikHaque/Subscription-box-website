@@ -10,6 +10,7 @@ import Products from "./components/Products";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import Footer from "./components/Shared/Footer";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -43,6 +44,7 @@ function App() {
           element={!user ? <Register /> : <Navigate to="/" />}
         />
       </Routes>
+      <Footer></Footer>
     </>
   );
 }
