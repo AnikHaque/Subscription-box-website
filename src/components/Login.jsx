@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -58,6 +58,12 @@ export default function Login() {
       >
         Login with Google
       </button>
+      <p className="text-center mt-4">
+        Don't have an account?{" "}
+        <Link to="/register" className="text-blue-600 hover:underline">
+          Register Here
+        </Link>
+      </p>
     </div>
   );
 }
