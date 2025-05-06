@@ -4,7 +4,7 @@ A modern subscription-based web application built with **React**, **Firebase Aut
 
 ## 🌐 Live Site
 
-[Visit SubscriptionHub](https://subscription-box-website.vercel.app/)
+[Visit Site](https://subscription-box-website.vercel.app/)
 
 ---
 
