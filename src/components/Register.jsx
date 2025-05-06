@@ -8,6 +8,7 @@ import {
 import { auth } from "../firebase";
 import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react"; // Assuming you're using Lucide or similar icons
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -16,6 +17,7 @@ export default function Register() {
     photoURL: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -71,6 +73,7 @@ export default function Register() {
   return (
     <div className="max-w-md mx-auto p-6 shadow-lg rounded bg-white mt-10">
       <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
+
       <input
         type="text"
         name="name"
@@ -95,14 +98,24 @@ export default function Register() {
         onChange={handleChange}
         className="input input-bordered w-full mb-3"
       />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={form.password}
-        onChange={handleChange}
-        className="input input-bordered w-full mb-3"
-      />
+
+      <div className="relative">
+        <input
+          type={showPassword ? "text" : "password"}
+          name="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+          className="input input-bordered w-full mb-3 pr-10"
+        />
+        <span
+          className="absolute right-3 top-3 cursor-pointer text-gray-500"
+          onClick={() => setShowPassword(!showPassword)}
+        >
+          {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+        </span>
+      </div>
+
       <button onClick={register} className="btn btn-primary w-full mb-2">
         Register
       </button>

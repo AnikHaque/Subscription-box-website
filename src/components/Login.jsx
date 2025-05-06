@@ -58,6 +58,13 @@ export default function Login() {
       >
         Login with Google
       </button>
+      <Link
+        to="/forgot-password"
+        state={{ email }}
+        className="text-blue-600 hover:underline"
+      >
+        Forgot Password?
+      </Link>
       <p className="text-center mt-4">
         Don't have an account?{" "}
         <Link to="/register" className="text-blue-600 hover:underline">

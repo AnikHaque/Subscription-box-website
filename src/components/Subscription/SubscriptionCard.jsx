@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 const SubscriptionCard = ({ service }) => {
   return (
-    <div className="card lg:max-w-lg lg:h-[400px] bg-base-100 shadow-sm">
+    <div
+      data-aos="zoom-in-down"
+      className="card lg:max-w-lg lg:h-[400px] bg-base-100 shadow-sm"
+    >
       <figure>
         <img
           src={service.thumbnail}

@@ -15,6 +15,7 @@ import SubscriptionDetail from "./components/Subscription/SubscriptionDetails";
 import Blogs from "./components/Blogs/Blogs";
 import NotFound from "./components/NotFound/NotFound";
 import Profile from "./components/Profile/Profile";
+import ForgotPassword from "./components/ForgetPassword";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -47,6 +48,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route
           path="/products"
           element={
