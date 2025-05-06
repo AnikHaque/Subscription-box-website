@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SubscriptionCard = ({ service }) => {
   return (
@@ -20,7 +21,9 @@ const SubscriptionCard = ({ service }) => {
         </div>
 
         <div className="mt-4">
-          <button className="btn btn-primary btn-block">View More</button>
+          <Link to={`/subscriptions/${service.id}`}>
+            <button className="btn btn-primary btn-block">View More</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Footer from "./components/Shared/Footer";
+import SubscriptionDetail from "./components/Subscription/SubscriptionDetails";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -32,6 +33,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <Products />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/subscriptions/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <SubscriptionDetail />
             </ProtectedRoute>
           }
         />
