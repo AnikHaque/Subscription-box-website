@@ -1,7 +1,7 @@
 // pages/SubscriptionDetail.jsx
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import subscriptions from "../../data/subscription.json";
+import subscriptions from "../../../public/data/subscription.json";
 
 const SubscriptionDetail = () => {
   const { id } = useParams();

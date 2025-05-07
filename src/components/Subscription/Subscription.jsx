@@ -1,5 +1,5 @@
 import React from "react";
-import subscriptions from "../../data/subscription.json";
+import subscriptions from "../../../public/data/subscription.json";
 import SubscriptionCard from "../Subscription/SubscriptionCard";
 const Subscription = () => {
   return (
