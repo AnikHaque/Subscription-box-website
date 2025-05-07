@@ -58,7 +58,8 @@ export default function AppRoutes({ user }) {
         path="/register"
         element={!user ? <Register /> : <Navigate to="/" />}
       />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/404" element={<NotFound />} />
+      <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
   );
 }
