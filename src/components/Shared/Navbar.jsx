@@ -66,9 +66,9 @@ export default function Navbar({ user }) {
                     alt="User"
                     className="w-8 h-8 rounded-full border-2 border-white"
                   />
-                  <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 whitespace-nowrap z-10">
                     {user.displayName || "No Name"}
-                  </span>
+                  </div>
                 </div>
               ) : (
                 <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-black">
