@@ -29,7 +29,7 @@ export default function Success() {
   return (
     <div className="bg-white py-20 px-4 md:px-10">
       <div className="max-w-4xl mx-auto text-center mb-14">
-        <h1 className="text-4xl font-extrabold text-gray-800">
+        <h1 className="text-4xl font-bold text-gray-800">
           Real stories from customers
         </h1>
         <p className="text-lg text-gray-600 mt-4">
