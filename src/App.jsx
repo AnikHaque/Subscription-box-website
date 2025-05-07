@@ -17,6 +17,7 @@ import NotFound from "./components/NotFound/NotFound";
 import Profile from "./components/Profile/Profile";
 import ForgotPassword from "./components/ForgetPassword";
 import Contact from "./components/Contact/Contact";
+import SuccessStories from "./components/Success-Stories/Success";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -49,6 +50,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/success" element={<SuccessStories />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/contact" element={<Contact />} />
         <Route

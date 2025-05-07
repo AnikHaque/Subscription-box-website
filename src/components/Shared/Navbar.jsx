@@ -55,6 +55,14 @@ export default function Navbar({ user }) {
             >
               My Profile
             </Link>
+            <Link
+              to="/success"
+              className={`block py-1 ${
+                isActive("/profile") ? "font-semibold underline" : ""
+              }`}
+            >
+              Success Stories
+            </Link>
             <Link to="/contact" className="block py-1">
               Contact Us
             </Link>
