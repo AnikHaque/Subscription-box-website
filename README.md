@@ -1,4 +1,4 @@
-# 🔐 TheCrate
+# 🔐 TheCrate website
 
 A modern subscription-based web application built with **React**, **Firebase Authentication**, and **Vite**. It offers secure login, protected routes, user profile management, dynamic blogs, testimonials, and more.
 
