@@ -40,14 +40,16 @@ const blogPosts = [
     title: "How AI Writer Changes the Content Game",
     date: "2025-03-20",
     excerpt: "Write better, faster, and smarter using cutting-edge AI tools...",
-    image: "https://via.placeholder.com/600x300.png?text=AI+Writer",
+    image:
+      "https://png.pngtree.com/png-vector/20220616/ourmid/pngtree-video-game-blogger-content-creator-background-with-man-use-headset-making-png-image_5082838.png",
   },
   {
     id: 6,
     title: "Design Smarter with DesignCraft",
     date: "2025-03-10",
     excerpt: "Unleashing creativity using next-gen design tools...",
-    image: "https://via.placeholder.com/600x300.png?text=DesignCraft",
+    image:
+      "https://png.pngtree.com/png-vector/20250311/ourlarge/pngtree-mosaic-equipment-decorative-design-craft-png-image_15673178.png",
   },
 ];
 
