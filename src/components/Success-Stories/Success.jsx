@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const successStories = [
   {
@@ -23,9 +23,26 @@ const successStories = [
     solution: "Adopted DesignCraft for cloud-based team design.",
     result: "Cut design turnaround time by 40% with real-time updates.",
   },
+  // You can add more stories here...
 ];
 
+const STORIES_PER_PAGE = 1;
+
 export default function Success() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(successStories.length / STORIES_PER_PAGE);
+
+  const paginatedStories = successStories.slice(
+    (currentPage - 1) * STORIES_PER_PAGE,
+    currentPage * STORIES_PER_PAGE
+  );
+
+  const goToPage = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
     <div className="bg-white py-20 px-4 md:px-10">
       <div className="max-w-4xl mx-auto text-center mb-14">
@@ -38,7 +55,7 @@ export default function Success() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-        {successStories.map((story) => (
+        {paginatedStories.map((story) => (
           <div
             key={story.id}
             className="bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6"
@@ -75,6 +92,37 @@ export default function Success() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center gap-2 mt-12">
+        <button
+          onClick={() => goToPage(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="btn btn-sm btn-outline"
+        >
+          Previous
+        </button>
+
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => goToPage(page)}
+            className={`btn btn-sm ${
+              page === currentPage ? "btn-primary" : "btn-outline"
+            }`}
+          >
+            {page}
+          </button>
+        ))}
+
+        <button
+          onClick={() => goToPage(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="btn btn-sm btn-outline"
+        >
+          Next
+        </button>
       </div>
 
       <div className="mt-20 text-center">
