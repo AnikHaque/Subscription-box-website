@@ -10,8 +10,8 @@ const Contact = () => {
               Contact us
             </h2>
             <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-500">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis.
+              We’re here to help! Whether you have questions, feedback, or need
+              assistance, feel free to reach out to us.
             </p>
           </div>
 
