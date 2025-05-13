@@ -90,7 +90,7 @@ const Contact = () => {
                     />
                   </svg>
                   <p class="mt-6 text-lg font-medium leading-relaxed text-gray-900">
-                    Indira Road, Farmgate, Dhaka, Bangladesh
+                    Dhaka, Bangladesh
                   </p>
                 </div>
               </div>
